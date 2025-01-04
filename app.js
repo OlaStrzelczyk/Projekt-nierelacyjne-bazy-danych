@@ -1,11 +1,7 @@
-//zmienne środowiskowe
 require('dotenv').config()
 
-
-// importuje expressa
 const express = require("express")
 
-// tworzę instancję expressa
 const app = express()
 
 const cors = require("cors");
@@ -18,7 +14,6 @@ app.use(cors({
 const mongoose = require("mongoose")
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.x2m5o.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`)
 
-//logger
 const morgan = require("morgan")
 app.use(morgan("dev"))
 
