@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Import modelu
 const Class = require("../models/classes");
 
 exports.classes_get_all = (req, res, next) => {
