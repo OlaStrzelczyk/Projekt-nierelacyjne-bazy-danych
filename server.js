@@ -9,7 +9,7 @@ const port = process.env.PORT || 4037;
 // stworzenie serwera
 const server = http.createServer(app);
 
-// odpalanie serwer
+// odpalanie serwera
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
