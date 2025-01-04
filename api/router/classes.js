@@ -1,12 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-// autoryzacja
 const checkAuth = require("../middleware/checkAuth");
 
-// importuję kontroler
 const ClassController = require("../controllers/classes");
-
 
 router.get("/", ClassController.classes_get_all);
 
