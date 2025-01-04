@@ -1,10 +1,9 @@
 const express = require("express"); 
+
 const router = express.Router();
 
-// autoryzacja
 const checkAuth = require("../middleware/checkAuth");
 
-// importuję kontroler
 const ReviewController = require("../controllers/reviews");
 
 // Endpoints
