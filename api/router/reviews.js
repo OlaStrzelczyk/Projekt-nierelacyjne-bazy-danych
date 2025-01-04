@@ -6,7 +6,6 @@ const checkAuth = require("../middleware/checkAuth");
 
 const ReviewController = require("../controllers/reviews");
 
-// Endpoints
 router.get("/", ReviewController.reviews_get_all);
 
 router.post("/", checkAuth, ReviewController.reviews_add_new);
