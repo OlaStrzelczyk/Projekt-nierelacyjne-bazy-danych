@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Import modelu
 const Review = require("../models/reviews");
 
 exports.reviews_get_all = (req, res, next) => {
