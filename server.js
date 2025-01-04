@@ -3,14 +3,13 @@ const http = require("http");
 
 const app = require("./app");
 
-// stworzę port na którym będzie nasłuchiwał serwer
+// stworzenie portu
 const port = process.env.PORT || 4037;
 
-// stworzę serwer
+// stworzenie serwera
 const server = http.createServer(app);
-// do środka idą ustawienia tego serwera, opcje
 
-// Odpalę serwer
+// odpalanie serwer
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
