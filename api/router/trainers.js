@@ -1,13 +1,11 @@
 const express = require("express"); 
+
 const router = express.Router();
 
-// autoryzacja
 const checkAuth = require("../middleware/checkAuth");
 
-// importuję kontroler
 const TrainerController = require("../controllers/trainers");
 
-// Endpointy
 router.get("/", TrainerController.trainers_get_all);
 
 router.post("/", checkAuth, TrainerController.trainers_add_new);
