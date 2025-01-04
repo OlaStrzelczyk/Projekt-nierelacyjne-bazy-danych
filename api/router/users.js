@@ -2,16 +2,12 @@ const express = require("express")
 const router = express.Router();
 const mongoose = require("mongoose")
 
-//import bcrypt
 const bcrypt = require("bcrypt")
 
-// importuję JBT
 const jwt = require("jsonwebtoken")
 
-//importuję model
 const User = require("../models/user");
 
-// zakładanie konta
 
 router.post("/signup", (req, res, next) => {
     bcrypt.hash(req.body.password, 10, (err, hash) => {
